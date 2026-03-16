@@ -7,7 +7,7 @@ Processes synchronized stereo pairs from OAK-D cameras to compute dense depth ma
 Integrates real-time YOLOv8 inferences with depth data to localize objects in 3D space. This node constructs structured Track messages, mapping detected classes to their precise(x, y, z)$ coordinates.
 
 * Perception Mathematics (perception_calc.py):
-A centralized C++ base class that encapsulates projective geometry, coordinate transformations, and stereo triangulation logic. It ensures mathematical consistency and optimizes data flow across the entire node network.Ground Truth 
+A centralized Python base class that encapsulates projective geometry, coordinate transformations, and stereo triangulation logic. It ensures mathematical consistency and optimizes data flow across the entire node network.
 
 * Validation (track_validation.py):
-Quantifies system reliability by comparing estimated spatial data against Ground Truth from simulation (e.g., FSDS) or annotated datasets. This component is critical for measuring sensory error and fine-tuning state estimation algorithms
+Provides real-time visual comparison between estimated Z-coordinates and Ground Truth data using Matplotlib. This node is essential for monitoring sensory accuracy and quantifying depth estimation errors during live operation.
